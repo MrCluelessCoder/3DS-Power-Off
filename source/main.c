@@ -16,10 +16,9 @@ int main()
 	aptInit();
 	hidInit(NULL);
 	gfxInitDefault();
-
-    u32 input;
-	// Main loop
 	
+	
+	// NS_APPID 
 	NS_APPID aptGetMenuAppID()
 	
 	{
@@ -27,9 +26,13 @@ int main()
 		aptOpenSession();
 		APT_GetAppletManInfo(NULL, 0xff, NULL, NULL, &menu_appid, NULL);
 		aptCloseSession();
+		
 		return menu_appid;
 	}
 	
+	//Main loop
+	while (aptMainLoop())
+		
 	{
 		aptOpenSession();
 		APT_ReplySleepQuery(NULL, currentAppId, 0x0);
@@ -37,23 +40,6 @@ int main()
 		
 		aptSetStatusPower(1);
 		aptSetStatus(APP_SUSPENDING);
-	}
-	
-	// This is only executed when application-termination was triggered via the home-menu power-off screen.
-	{
-		aptOpenSession();
-		APT_ReplySleepQuery(NULL, currentAppId, 0x0);
-		aptCloseSession();
-	}
-	
-	{
-		aptOpenSession();
-		APT_PrepareToCloseApplication(NULL, 0x8);
-		aptCloseSession();	
-		
-		aptOpenSession();
-		APT_CloseApplication(NULL, 0x0, 0x0, 0x0);
-		aptCloseSession();
 	}
 	
 	// Exit services
