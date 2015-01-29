@@ -1,10 +1,6 @@
 3DS Power Off
 
-The idea is to create a 3ds software to power off the 
-
-console without pressing the power button in order to 
-
-prolong the lifespan of it.
+The idea is to create a 3ds software to power off the console without pressing the power button in order to prolong the lifespan of it.
 
 Tap to power off.(Broken)
 
