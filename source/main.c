@@ -18,22 +18,11 @@ int main()
 	// Main loop
 	while (aptMainLoop())
 	{
-		//Get AppID
-		NS_APPID aptGetMenuAppID()
-		
-		{
-		NS_APPID menu_appid;
-		aptOpenSession();
-		APT_GetAppletManInfo(NULL, 0xff, NULL, NULL, &menu_appid, NULL);
-		aptCloseSession();
-		return menu_appid;
-		}
-		
 		//HID Input
 		hidScanInput();
 		input = hidKeysDown();
 
-		//Exit App if L is pressed
+		//Reboot EmuNand if L is pressed
 		if (input & KEY_L) break;
 		//Reboot SysNand if R is pressed
 		if (input & KEY_R)
@@ -53,6 +42,7 @@ int main()
 			aptSetStatusPower(1);
 			aptSetStatus(APP_SUSPENDING);
 		}
+	
 	}
 
 	// Exit services
