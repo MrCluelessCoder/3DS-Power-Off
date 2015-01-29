@@ -35,7 +35,7 @@ int main()
 
 		//Reboot EmuNand if L is pressed
 		if (input & KEY_L) break;
-		//Reboot SyNand if R is pressed
+		//Reboot SysNand if R is pressed
 		if (input & KEY_R)
 			{
 			//Reboot Code
