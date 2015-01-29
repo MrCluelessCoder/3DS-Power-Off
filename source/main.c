@@ -33,7 +33,7 @@ int main()
 		hidScanInput();
 		input = hidKeysDown();
 
-		//Reboot EmuNand if L is pressed
+		//Exit App if L is pressed
 		if (input & KEY_L) break;
 		//Reboot SysNand if R is pressed
 		if (input & KEY_R)
