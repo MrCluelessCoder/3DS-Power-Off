@@ -49,6 +49,9 @@ int main()
 			aptOpenSession();
 			APT_ReplySleepQuery(NULL, currentAppId, 0x0);
 			aptCloseSession();
+			
+			aptSetStatusPower(1);
+			aptSetStatus(APP_SUSPENDING);
 		}
 	}
 
