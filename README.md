@@ -2,7 +2,7 @@
 
 The idea is to create a 3ds software to power off the console without pressing the power button. Or at least trigger the application closed menu with the touch screen option to power off.
 
-Tap to power off.(Broken)
+Tap to power off.(Broken, still using trail & error to find the apt service used to trigger power off)
 
 Holding L button exit the app and can also be used to return back to the EmuNand after playing a game that uses additional resources form the menu.
 
