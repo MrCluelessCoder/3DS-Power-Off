@@ -11,4 +11,5 @@ Holding R button kicks you out of the Emunand back into SysNand.
 Power off function is still broken. Something needs to be fixed. There is an alternate method to power off and it requires writing a value of 8 to one of the I2C registers, (REGISTER:0x20, WIDTH:8) on device 3. But this method is potentially dangerous? 
 
 Credits:
+Smea for creating ctrulib which build the base foundation for making homebrews etc.
 Code is based off AlbertoSONIC's Quick Reboot. I modified the HID inputs and added power off code.
